@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
@@ -16,12 +18,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
         ),
-        //debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         
         darkTheme: ThemeData(
           brightness: Brightness.dark,
         ),
-        initialRoute: "/",
+        initialRoute: MyRoutes.HomeRoute,
         routes: {
           "/": (context) => LoginPage(),
           MyRoutes.HomeRoute : (context) => HomePage(),

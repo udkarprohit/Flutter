@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   final int days = 30;
@@ -8,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Catalog App"),
+          title:  Text("Catalog App"),
         ),
       body: Center(
         child: Container(
@@ -16,7 +19,7 @@ class HomePage extends StatelessWidget {
               "Welcome to $days FlutterApp by $name"), //$day repesents interpellations if there r more than 1 words then we have to use {}
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
