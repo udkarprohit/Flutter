@@ -13,12 +13,10 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent
-      ),
-      backgroundColor: MyTheme.creamColor,
+      appBar: AppBar(backgroundColor: Colors.transparent),
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -28,7 +26,8 @@ class HomeDetailPage extends StatelessWidget {
                 onPressed: () {},
                 style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(MyTheme.darkBluishColor),
+                        // ignore: deprecated_member_use
+                        MaterialStateProperty.all(context.theme.buttonColor),
                     shape: MaterialStateProperty.all(StadiumBorder(),)
                     ),
                 child: "Add to cart".text.make()
@@ -50,11 +49,11 @@ class HomeDetailPage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
-                    catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
+                    catalog.name.text.xl4.color(context.accentColor).bold.make(),
                     catalog.desc.text.xl.make(),10.heightBox,
                     "Takimata invidunt et stet est lorem sed sed. Sadipscing et aliquyam kasd gubergren et lorem tempor consetetur. Eirmod gubergren amet sed tempor tempor sit ut gubergren. Clita gubergren et et est sea sea amet, vero tempor sed accusam consetetur ut diam voluptua. Et sed rebum sit justo ut amet nonumy."
                     .text.make().p8()
