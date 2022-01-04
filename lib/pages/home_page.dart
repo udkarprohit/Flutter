@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -41,6 +42,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: MyTheme.creamColor,
+        
         body: SafeArea(
           child: Container(
             padding: Vx.m32,
@@ -49,7 +51,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 CatalogHeader(),
                 if (Catalogmodel.items != null && Catalogmodel.items.isNotEmpty)
-                  const CatalogList().py16().expand()
+                  CatalogList().py16().expand()
                 else
                   const  CircularProgressIndicator().centered().py16().expand(),
                   
