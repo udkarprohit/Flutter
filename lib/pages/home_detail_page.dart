@@ -15,7 +15,7 @@ class HomeDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent
-),
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -29,11 +29,10 @@ class HomeDetailPage extends StatelessWidget {
                 style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all(MyTheme.darkBluishColor),
-                    shape: MaterialStateProperty.all(
-                      const StadiumBorder(),
-                    )),
-                child: "Buy".text.make()
-                ).wh(100, 50)
+                    shape: MaterialStateProperty.all(StadiumBorder(),)
+                    ),
+                child: "Add to cart".text.make()
+                ).wh(120, 50)
           ],
         ).p32(),
       ),
@@ -55,12 +54,10 @@ class HomeDetailPage extends StatelessWidget {
                 width: context.screenWidth,
                 child: Column(
                   children: [
-                    catalog.name.text.xl4
-                        .color(MyTheme.darkBluishColor)
-                        .bold
-                        .make(),
-                    catalog.desc.text.xl.make(),
-                    10.heightBox,
+                    catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
+                    catalog.desc.text.xl.make(),10.heightBox,
+                    "Takimata invidunt et stet est lorem sed sed. Sadipscing et aliquyam kasd gubergren et lorem tempor consetetur. Eirmod gubergren amet sed tempor tempor sit ut gubergren. Clita gubergren et et est sea sea amet, vero tempor sed accusam consetetur ut diam voluptua. Et sed rebum sit justo ut amet nonumy."
+                    .text.make().p8()
                   ],
                 ).py64(),
               ),
