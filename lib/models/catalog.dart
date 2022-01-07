@@ -1,6 +1,14 @@
 import 'dart:convert';
 
 class Catalogmodel {
+
+  
+  static final catModel = Catalogmodel._internal();
+
+  Catalogmodel._internal();
+
+  factory Catalogmodel() => catModel;
+
   static List<Item> items = [
 
   Item(
@@ -11,6 +19,8 @@ class Catalogmodel {
       color: "#33505a",
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc")
 ];
+
+  set catalog(Catalogmodel catalog) {}
 //Get Item by ID
 
 // ignore: null_closures
@@ -19,6 +29,8 @@ class Catalogmodel {
 
 //Get Item By Position
  Item getByPosition (int pos) => items[pos];
+
+  void add(Catalogmodel catalog) {}
 
 
 }
